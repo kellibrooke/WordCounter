@@ -2,16 +2,20 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using WordCounter;
+
 namespace WordCounter.Tests
 {
     [TestClass]
     public class RepeatCounterTest
     {
         [TestMethod]
-        public void DoIPass_TestToSeeIfThisWorks_True()
+        public void ConvertToLowerCase_MakesAllLettersLowerCase_String()
         {
-            RepeatCounter newObject = new RepeatCounter();
-            Assert.AreEqual(true, newObject.DoIPass());
+            CounterTest newTest = new CounterTest();
+            string testString = "TEST STRING";
+            string expected =  "test string";
+            string actual = newTest.ConvertToLowerCase(testString);
+            Assert.AreEqual(expected, actual);
         }
     }
 }
