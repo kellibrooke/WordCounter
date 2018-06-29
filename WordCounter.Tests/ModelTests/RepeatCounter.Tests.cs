@@ -8,6 +8,17 @@ namespace WordCounter.Tests
     [TestClass]
     public class RepeatCounterTest
     {
+      [TestMethod]
+      public void GetSetUserSentence_ValidatesConvertsUserSentence_LowercaseArrayOfWords()
+      {
+        RepeatCounter newTest = new RepeatCounter();
+        string testUserInput = "a test for a test";
+        newTest.SetUserSentence(testUserInput);
+        string[] actual = newTest.GetUserSentence();
+        string[] expected = { "a", "test", "for", "a", "test" };
+        CollectionAssert.AreEqual(expected, actual);
+      }
+
         [TestMethod]
         public void SentenceToWords_SplitsSentenceIntoWords_StringArray()
         {

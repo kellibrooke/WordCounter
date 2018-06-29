@@ -5,7 +5,7 @@ namespace WordCounter
 {
     public class RepeatCounter
     {
-        private string _userSentence;
+        private string[] _userSentence;
         private string _userCheckWord;
 
         private Dictionary<string, int> _wordTally = new Dictionary<string, int>();
@@ -15,12 +15,18 @@ namespace WordCounter
             string[] validaterSentence = this.SentenceToWords(userSentence);
             if (this.ContainsNoPunctuation(validaterSentence))
             {
-                _userSentence = userSentence.ToLower();
+                string lowerCaseSentence = userSentence.ToLower();
+                _userSentence = this.SentenceToWords(lowerCaseSentence);
             }
             else
             {
-                _userSentence = "invalid response";
+                _userSentence = new string[] {"an", "error"};
             }
+        }
+
+        public string[] GetUserSentence()
+        {
+            return _userSentence;
         }
 
         public Dictionary<string, int> GetWordTally()
