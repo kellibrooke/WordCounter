@@ -5,9 +5,14 @@ namespace WordCounter
 {
     public class RepeatCounter
     {
-        public bool DoIPass()
+        private string _userSentence;
+        private string _userCheckWord;
+
+        private Dictionary<string, int> wordTally = new Dictionary<string, int>();
+
+        public string ConvertToLowerCase(string userSentence)
         {
-            return true;
+            return userSentence.ToLower();
         }
     }
 }
