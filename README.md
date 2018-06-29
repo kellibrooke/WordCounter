@@ -27,7 +27,7 @@ Your mission is to create a program that checks how frequently a word appears in
 * Clone the repo
 * Navigate to repo folder via command line.
 * Run `dotnet restore` from within the project directory
-* Run 'mcs RepeatCounter.cs' and 'mono RepeatCounter.exe'.
+* Run `mcs RepeatCounter.cs` and `mono RepeatCounter.exe`.
 
 ## Contribution Requirements
 
