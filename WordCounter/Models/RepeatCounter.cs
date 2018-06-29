@@ -26,9 +26,9 @@ namespace WordCounter
             return userWords;
         }
 
-        public bool ContainsNoPunctuation(string userWord)
+        public bool ContainsNoPunctuation(string userWords)
         {
-            foreach (char letter in userWord)
+            foreach (char letter in userWords)
             {
                 if(!Char.IsLetter(letter))
                 {
@@ -52,5 +52,24 @@ namespace WordCounter
               }
             }
         }
+
+        public int WordRepeatAmount(string userWord)
+        {
+            int numberOfRepeats;
+            _wordTally.TryGetValue(userWord, out numberOfRepeats);
+            return numberOfRepeats;
+        }
+
+        // x = "here it is doing it well"
+        // lower = ConvertToLowerCase(x)
+        // words = SentenceToWords(lower)
+        // if(ContainsNoPunctuation(words) == false)
+        //   user  error alert
+        // else
+        //   CreateWordTally(words)
+        //   y = "it"
+
+
+
     }
 }

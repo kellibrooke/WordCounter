@@ -52,8 +52,8 @@ namespace WordCounter.Tests
         public void CreateWordTally_ChecksWordsAddedValuesCorrect_DictDef()
         {
           RepeatCounter newTest = new RepeatCounter();
-          string[] testWords = { "test", "words"};
-          int expected = 1;
+          string[] testWords = { "test", "words", "test"};
+          int expected = 2;
           newTest.CreateWordTally(testWords);
           Dictionary<string, int> actualTally = newTest.GetTally();
           actualTally.TryGetValue("test", out int actual);
