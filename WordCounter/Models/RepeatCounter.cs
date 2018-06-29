@@ -23,19 +23,14 @@ namespace WordCounter
 
         public bool ContainsNoPunctuation(string userWord)
         {
-            char[] individualLetters = userWord.ToCharArray();
-            foreach (char letter in individualLetters)
+            foreach (char letter in userWord)
             {
-                if (!(IsLetter(individualLetters)))
+                if(!Char.IsLetter(letter))
                 {
-                    return false;
-                }
-                else
-                {
-                    return true;
+                      return false;
                 }
             }
-
+            return true;
         }
     }
 }

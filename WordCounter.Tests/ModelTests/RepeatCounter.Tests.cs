@@ -27,5 +27,15 @@ namespace WordCounter.Tests
           string[] actual = newTest.SentenceToWords(testString);
           CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ContainsNoPunctuation_ChecksWordCharsAreLetters_True()
+        {
+          RepeatCounter newTest = new RepeatCounter();
+          string testString = "test";
+          bool expected =  true;
+          bool actual = newTest.ContainsNoPunctuation(testString);
+          Assert.AreEqual(expected, actual);
+        }
     }
 }
