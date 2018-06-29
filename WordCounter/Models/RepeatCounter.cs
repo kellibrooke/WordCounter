@@ -10,7 +10,7 @@ namespace WordCounter
 
         private Dictionary<string, int> _wordTally = new Dictionary<string, int>();
 
-        public void SetUserSentence(userSentence)
+        public void SetUserSentence(string userSentence)
         {
             string[] validaterSentence = this.SentenceToWords(userSentence);
             if (this.ContainsNoPunctuation(validaterSentence))
@@ -34,13 +34,16 @@ namespace WordCounter
             return userWords;
         }
 
-        public bool ContainsNoPunctuation(string userWords)
+        public bool ContainsNoPunctuation(string[] userWords)
         {
-            foreach (char letter in userWords)
+            for (int x=0; x<userWords.Length; x++)
             {
-                if(!Char.IsLetter(letter))
+                foreach (char letter in userWords[x])
                 {
-                      return false;
+                    if(!Char.IsLetter(letter))
+                    {
+                          return false;
+                    }
                 }
             }
             return true;
