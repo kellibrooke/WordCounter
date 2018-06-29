@@ -23,9 +23,9 @@ namespace WordCounter.Tests
         {
           RepeatCounter newTest = new RepeatCounter();
           string testString = "test string";
-          string[] expected =  {"test", "string"};
-          string actual = newTest.SentenceToWords(testString);
-          Assert.AreEqual(expected, actual);
+          string[] expected =  { "test", "string" };
+          string[] actual = newTest.SentenceToWords(testString);
+          CollectionAssert.AreEqual(expected, actual);
         }
     }
 }
