@@ -10,7 +10,7 @@ namespace WordCounter
 
         private Dictionary<string, int> _wordTally = new Dictionary<string, int>();
 
-        public Dictionary<string, int> GetTally()
+        public Dictionary<string, int> GetWordTally()
         {
           return _wordTally;
         }
