@@ -8,7 +8,7 @@ namespace WordCounter
         private string _userSentence;
         private string _userCheckWord;
 
-        private Dictionary<string, int> wordTally = new Dictionary<string, int>();
+        private Dictionary<string, int> _wordTally = new Dictionary<string, int>();
 
         public string ConvertToLowerCase(string userSentence)
         {
@@ -31,6 +31,21 @@ namespace WordCounter
                 }
             }
             return true;
+        }
+
+        public void CreateWordTally(string[] userWords)
+        {
+            foreach (string word in userWords)
+            {
+              if (_wordTally.ContainsKey(word))
+              {
+                  _wordTally[word] += 1;
+              }
+              else
+              {
+                  _wordTally.Add(word, 1);  
+              }
+            }
         }
     }
 }
