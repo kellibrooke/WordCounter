@@ -10,14 +10,22 @@ namespace WordCounter
 
         private Dictionary<string, int> _wordTally = new Dictionary<string, int>();
 
+        public void SetUserSentence(userSentence)
+        {
+            string[] validaterSentence = this.SentenceToWords(userSentence);
+            if (this.ContainsNoPunctuation(validaterSentence))
+            {
+                _userSentence = userSentence.ToLower();
+            }
+            else
+            {
+                _userSentence = "invalid response";
+            }
+        }
+
         public Dictionary<string, int> GetWordTally()
         {
           return _wordTally;
-        }
-
-        public string ConvertToLowerCase(string userSentence)
-        {
-            return userSentence.ToLower();
         }
 
         public string[] SentenceToWords(string userSentence)
