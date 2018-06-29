@@ -18,6 +18,7 @@ namespace WordCounter
         public string[] SentenceToWords(string userSentence)
         {
             string[] userWords = userSentence.Split(' ');
+            return userWords;
         }
     }
 }
