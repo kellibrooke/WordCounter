@@ -3,16 +3,6 @@ using System.Collections.Generic;
 
 namespace WordCounter
 {
-    public class Program
-    {
-        public static void Main()
-        {
-            RepeatCounter newTest = new RepeatCounter();
-            Console.WriteLine("Enter a sentence.");
-            string theSentence = Console.ReadLine();
-
-        }
-    }
     public class RepeatCounter
     {
         private string[] _userSentence;
