@@ -30,22 +30,22 @@ namespace WordCounter.Tests
         }
 
         [TestMethod]
-        public void ContainsNoPunctuation_ChecksWordCharsAreLetters_True()
+        public void SentenceContainsNoPunctuation_ChecksWordCharsAreLetters_True()
         {
           RepeatCounter newTest = new RepeatCounter();
           string[] testString = { "test", "is", "good" };
           bool expected =  true;
-          bool actual = newTest.ContainsNoPunctuation(testString);
+          bool actual = newTest.SentenceContainsNoPunctuation(testString);
           Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ContainsNoPunctuation_ChecksWordCharsAreLetters_False()
+        public void SentenceContainsNoPunctuation_ChecksWordCharsAreLetters_False()
         {
           RepeatCounter newTest = new RepeatCounter();
           string [] testString = { "test", "is", "good." };
           bool expected =  false;
-          bool actual = newTest.ContainsNoPunctuation(testString);
+          bool actual = newTest.SentenceContainsNoPunctuation(testString);
           Assert.AreEqual(expected, actual);
         }
 
