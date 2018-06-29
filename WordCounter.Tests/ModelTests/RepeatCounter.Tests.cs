@@ -11,7 +11,7 @@ namespace WordCounter.Tests
         [TestMethod]
         public void ConvertToLowerCase_MakesAllLettersLowerCase_String()
         {
-            CounterTest newTest = new CounterTest();
+            RepeatCounter newTest = new RepeatCounter();
             string testString = "TEST STRING";
             string expected =  "test string";
             string actual = newTest.ConvertToLowerCase(testString);
