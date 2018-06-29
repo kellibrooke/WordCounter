@@ -18,6 +18,7 @@ Your mission is to create a program that checks how frequently a word appears in
 * An empty dictionary is created to keep track of the word count for each word.
 * A loop is iterated through for each word in the string and tested whether or not it can be found in the dictionary. If it is not found, it is added as a key and its value is set to 1. If it is found as a key already existing in the dictionary, its value simply increases by 1.
 * Once the dictionary is created by the string, a user is prompted to enter a word.
+* The word is checked to make sure it is composed only of letters. If not, it will display an error to the user. If it is only letters, it will be made all lowercase and sent to the next step.
 * That word will be sent to the dictionary, and the dictionary's keys will be searched for that word. If found, it will report to the user how many times that word was found in the previously entered string of words. If not found, it will report to the user that they have entered a word that does not exist in the previously entered string of words.
 
 ## Setup on OSX
