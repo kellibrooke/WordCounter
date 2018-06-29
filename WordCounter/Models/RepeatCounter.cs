@@ -20,5 +20,22 @@ namespace WordCounter
             string[] userWords = userSentence.Split(' ');
             return userWords;
         }
+
+        public bool ContainsNoPunctuation(string userWord)
+        {
+            char[] individualLetters = userWord.ToCharArray();
+            foreach (char letter in individualLetters)
+            {
+                if (!(IsLetter(individualLetters)))
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+
+        }
     }
 }
