@@ -14,5 +14,10 @@ namespace WordCounter
         {
             return userSentence.ToLower();
         }
+
+        public string[] SentenceToWords(string userSentence)
+        {
+            string[] userWords = userSentence.Split(' ');
+        }
     }
 }
