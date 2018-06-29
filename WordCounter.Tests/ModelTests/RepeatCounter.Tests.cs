@@ -37,5 +37,15 @@ namespace WordCounter.Tests
           bool actual = newTest.ContainsNoPunctuation(testString);
           Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void ContainsNoPunctuation_ChecksWordCharsAreLetters_False()
+        {
+          RepeatCounter newTest = new RepeatCounter();
+          string testString = "tes44t";
+          bool expected =  false;
+          bool actual = newTest.ContainsNoPunctuation(testString);
+          Assert.AreEqual(expected, actual);
+        }
     }
 }
