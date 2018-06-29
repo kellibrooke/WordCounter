@@ -30,7 +30,7 @@ namespace WordCounter
             }
             else
             {
-                _userSentence = new string[] {"an", "error"};
+                _userSentence = new string[] {};
             }
         }
 
@@ -44,12 +44,17 @@ namespace WordCounter
             if (this.WordContainsNoPunctuation(userWord))
             {
                 string lowerCaseWord = userWord.ToLower();
-                _userCheckWord =lowerCaseWord;
+                _userCheckWord = lowerCaseWord;
             }
             else
             {
-                _userCheckWord = "error";
+                _userCheckWord = String.Empty;
             }
+        }
+
+        public string GetUserCheckWord()
+        {
+            return _userCheckWord;
         }
 
         public Dictionary<string, int> GetWordTally()

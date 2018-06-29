@@ -19,6 +19,17 @@ namespace WordCounter.Tests
         CollectionAssert.AreEqual(expected, actual);
       }
 
+      [TestMethod]
+      public void SetGetUserCheckWord_SetsGetsUserCheckWord_String()
+      {
+        RepeatCounter newTest = new RepeatCounter();
+        string testUserInput = "test";
+        newTest.SetUserCheckWord(testUserInput);
+        string actual = newTest.GetUserCheckWord();
+        string expected = "test";
+        Assert.AreEqual(expected, actual);
+      }
+
         [TestMethod]
         public void SentenceToWords_SplitsSentenceIntoWords_StringArray()
         {
