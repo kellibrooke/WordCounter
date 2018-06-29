@@ -47,5 +47,17 @@ namespace WordCounter.Tests
           bool actual = newTest.ContainsNoPunctuation(testString);
           Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void CreateWordTally_ChecksWordsAddedValuesCorrect_DictDef()
+        {
+          RepeatCounter newTest = new RepeatCounter();
+          string[] testWords = { "test", "words"};
+          int expected = 1;
+          newTest.CreateWordTally(testWords);
+          Dictionary<string, int> actualTally = newTest.GetTally();
+          actualTally.TryGetValue("test", out int actual);
+          Assert.AreEqual(expected, actual);
+        }
     }
 }

@@ -10,6 +10,11 @@ namespace WordCounter
 
         private Dictionary<string, int> _wordTally = new Dictionary<string, int>();
 
+        public Dictionary<string, int> GetTally()
+        {
+          return _wordTally;
+        }
+
         public string ConvertToLowerCase(string userSentence)
         {
             return userSentence.ToLower();
@@ -43,7 +48,7 @@ namespace WordCounter
               }
               else
               {
-                  _wordTally.Add(word, 1);  
+                  _wordTally.Add(word, 1);
               }
             }
         }
